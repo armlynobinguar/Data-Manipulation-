@@ -189,3 +189,7 @@ m = ((iron_1_and_2['name_1'].isnull()) |
 
 # Print the first few rows of iron_1_and_2
 print(iron_1_and_2[m].head())
+
+# Merge the crews table to itself
+crews_self_merged = crews.merge(crews, on='id', how='inner',
+                                suffixes=('_dir','_crew'))
