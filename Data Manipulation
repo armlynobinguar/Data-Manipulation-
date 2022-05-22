@@ -220,3 +220,6 @@ movies_ratings = movies.merge(ratings, on='id', how='left')
 
 # Print the first few rows of movies_ratings
 print(movies_ratings.head())
+
+# Merge sequels and financials on index id
+sequels_fin = sequels.merge(financials, on='id', how='left')
