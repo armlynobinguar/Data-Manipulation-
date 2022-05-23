@@ -303,3 +303,9 @@ print(cnt_by_gid.merge(genres, on='gid'))
 tracks_from_albums = pd.concat([tracks_master, tracks_ride, tracks_st], 
                                sort=True)
 print(tracks_from_albums)
+
+# Concatenate the tracks so the index goes from 0 to n-1
+tracks_from_albums = pd.concat([tracks_master, tracks_ride, tracks_st],
+                               ignore_index=True,
+                               sort=True)
+print(tracks_from_albums)
