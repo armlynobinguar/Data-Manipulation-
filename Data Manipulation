@@ -350,3 +350,9 @@ tracks_sold = tracks_invoices.groupby(['tid','name']).agg({'quantity':'sum'})
 
 # Sort in decending order by quantity and print the results
 print(tracks_sold.sort_values(['quantit
+
+# Concatenate the classic tables vertically
+classic_18_19 = pd.concat([classic_18, classic_19], ignore_index=True)
+
+# Concatenate the pop tables vertically
+pop_18_19 = pd.concat([pop_18, pop_19], ignore_index=True)
