@@ -371,3 +371,10 @@ popular_classic = classic_18_19[classic_18_19['tid'].isin(classic_pop['tid'])]
 
 # Print popular chart
 print(popular_classic)
+
+
+# Use merge_ordered() to merge gdp and sp500 on year and date
+gdp_sp500 = pd.merge_ordered(gdp, sp500, left_on='year', right_on='date', 
+                             how='left')
+# Print gdp_sp500
+print (gdp_sp500)
